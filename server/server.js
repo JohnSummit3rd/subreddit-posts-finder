@@ -20,7 +20,7 @@ app.get("/api/reddit/:subreddit", async (req, res) => {
       }
     );
 
-    if (!redditRes) {
+    if (!redditRes.ok) {
       return res.status(404).json({ error: "Subreddit not found" });
     }
 

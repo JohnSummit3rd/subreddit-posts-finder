@@ -15,7 +15,7 @@ function showError() {
 async function fetchSubreddit(subreddit) {
   try {
     const res = await fetch(
-      `/api/reddit/${subreddit}`
+      `http://localhost:3000/api/reddit/${subreddit}`
     );
 
     if (!res.ok) {
